@@ -1,0 +1,56 @@
+body { 
+  padding-top: 50px;
+  background-color: $body-bg; 
+  font-family: Montserrat,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.trip-planner-nav{
+    height: 40px;    
+}
+
+  footer {
+    color: white;
+    height: 30px;       
+    float:none;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .fixedFooter{
+    position: fixed;
+  }
+  
+  .cardMinHeight{
+      min-height: 550px;
+  }
+
+
+  
+  
+  .navbar-brand {
+    .brand-name {
+      border-left: 1px solid #fff;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif !important;
+      padding-left:10px;
+    }
+  }
+  
+  .nav-link{
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif !important;    
+    background-color: $primaryColor;
+    color: white;
+  }
+    
+  .navbar { 
+    padding:0rem !important;
+    height: 70px;
+  }
+  
+  .navbar-brand{
+    padding-left: $left-padding-x;
+  }
+
+  

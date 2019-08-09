@@ -1,0 +1,34 @@
+<div class="col-md-10">
+    <div class="card">      
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>All Trips</h2>            
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Stay</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let tripItem of allTrips">
+                  <td>{{tripItem.name}}</td>
+                  <td>{{tripItem.startDate | date: 'mediumDate'}}</td>
+                  <td>{{tripItem.endDate | date: 'mediumDate'}}</td>
+                  <td>{{tripItem.stay.name}}</td>
+                  <td>
+                    <input type="button" class="btn btn-link" (click)="EditTrip(tripItem.id)" value="Edit" />
+                  </td>
+                </tr>                
+              </tbody>
+            </table>
+            <input type="button" class="btn btn-primary" (click)="AddNewTrip()" value="Add New" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 

@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-lg-12">
+          <app-navigation></app-navigation>
+      </div>  
+  </div>
+  <div class="row">   
+    <div class="col-lg-12">     
+      <div>                
+        <div class="router-output">
+          <router-outlet></router-outlet>
+        </div>
+        <div class="SnackBar">
+          <app-notification></app-notification>
+        </div>
+      </div>
+    </div>   
+  </div>
+  <div>
+    <footer class="container-fluid text-center bg-primary" [ngClass]="{'fixedFooter': fixedFooterFlag}">
+      <span class="align-middle">Developed by Packt Development Team - Version 1.0
+      </span>
+    </footer>
+  </div>
+</div>
+

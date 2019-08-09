@@ -1,0 +1,18 @@
+$primaryColor:#3C3C3C;
+$divider: #BDBDBD;
+$secondaryColor:#EC6611;
+$theme-colors: (
+    "primary": $primaryColor,    
+    "secondary": $secondaryColor,
+    "danger": #ff4136
+  );
+
+$font-size-base: 0.9rem !default;
+$card-cap-bg:  #3C3C3C;
+$body-bg: #F8F8F8;  
+
+$card-spacer-y: .45rem !default;
+$card-spacer-x: 1.25rem !default;
+$card-top-bg:#3C3C3C;
+
+$left-padding-x:          .3em !default;

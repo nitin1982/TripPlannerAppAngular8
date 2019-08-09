@@ -1,0 +1,64 @@
+<div *ngIf="!loggedIn" class="row">    
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header text-white">Sign in</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form #frmLogin="ngForm" class="was-validated" novalidate (ngSubmit)="Submit()">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </div>
+                                <input id="userName" type="email" class="form-control" name="userName" required
+                                    [(ngModel)]="user.userName" placeholder="Email">
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
+                                </div>
+                                <input id="password" type="password" class="form-control" required [(ngModel)]="user.password"
+                                    name="password" placeholder="Password">
+                                <div class="invalid-feedback">Please enter a password.</div>
+                            </div>
+                            <!-- <div class="form-group">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" name="charterEmp" [(ngModel)]="user.charterEmp" value="">Login
+                                                with Charter Account?</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" name="noServerAPI" [(ngModel)]="noServerAPI" value="">Server
+                                                API is not running.</label>
+                                        </div>
+                                   </div> -->
+                            <div class="form-group">
+                                    <div class="row">
+                                            <div class="col-lg-12 text-left">
+                                                    <button type="submit" style="margin-right:0.5rem; margin-bottom: 0.2rem;" [disabled]="frmLogin.invalid || signingInProgress" (click)="toggleForgotPassword(0)"
+                                                    class="btn btn-secondary">Login</button>
+                                                 
+                                                    <button (click)="Clear()" style="margin-right:0.5rem; margin-bottom: 0.2rem;" type="button" class="btn btn-secondary">Cancel</button>
+
+                                                    <button type="submit" style="margin-right:0.5rem; margin-bottom: 0.2rem;" class="btn btn-secondary" (click)="toggleForgotPassword(1)"
+                                                        data-toggle="tooltip" data-placement="right" title="Clicking on this button will send the password to the email we have in our file.">Sign up</button>
+                                             </div>
+                                        </div>
+                                    
+                                        
+                                                                   
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

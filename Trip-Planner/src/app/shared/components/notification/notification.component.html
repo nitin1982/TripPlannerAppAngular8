@@ -1,0 +1,6 @@
+<div *ngIf="alerts !== []">
+    <div *ngFor="let alert of alerts" class="{{ cssClass(alert) }} alert-dismissable" [@simpleFadeAnimation]="'in'">
+        {{alert.message}}
+        &nbsp;<a class="close" (click)="removeAlert(alert)">&times;</a>
+    </div>
+</div>

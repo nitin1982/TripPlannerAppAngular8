@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header text-white"><h5>Trips</h5></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a routerLinkActive='active bg-secondary text-white' class='nav-link' [routerLinkActiveOptions]="{ exact : true}" [routerLink]="['../Trips']">List</a>
+                    </li>
+                    <li class="nav-item" *ngIf="activeTrip">
+                      <a routerLinkActive='active bg-secondary text-white' class='nav-link' [routerLink]="['/Trips',activeTrip.id,'Edit']">Add/Edit Trip</a>
+                    </li>   
+                    <li class="nav-item" *ngIf="activeTrip && activeTrip.id > 0">
+                        <a routerLinkActive='active bg-secondary text-white' class='nav-link' [routerLink]="['/Trips',activeTrip.id,'Stay']">Stay</a>
+                    </li>  
+                    <li class="nav-item" *ngIf="activeTrip && activeTrip.id > 0">
+                        <a routerLinkActive='active bg-secondary text-white' class='nav-link' [routerLink]="['/Trips',activeTrip.id,'Addresses']">Addresses</a>
+                    </li>
+                    <li class="nav-item" *ngIf="activeTrip && activeTrip.id > 0">
+                        <a routerLinkActive='active bg-secondary text-white' class='nav-link' [routerLink]="['/Trips',activeTrip.id,'Documents']">Documents</a>
+                    </li>    
+                    <li class="nav-item" *ngIf="activeTrip && activeTrip.id > 0">
+                        <a routerLinkActive='active bg-secondary text-white' class='nav-link' [routerLink]="['/Trips',activeTrip.id,'Links']">Links</a>
+                    </li>                                                  
+                  </ul>
+              </div>
+            </div>
+            <div class="row">                    
+              <div class="col-md-12">
+                  <router-outlet></router-outlet>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+    </div>

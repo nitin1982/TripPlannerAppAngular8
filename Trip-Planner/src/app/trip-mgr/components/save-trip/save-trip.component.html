@@ -1,0 +1,58 @@
+<div class="container tab-pane active">
+    <form #frmSaveTrip="ngForm" class="was-validated" (ngSubmit)="Submit()">
+        <div class="row">
+            <div class="col-md-12">
+                &nbsp;
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3 col-md-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <span style="width: 100px;">Name your trip</span>
+                    </div>
+                </div>
+                <input type="text" id="name" name="name" required 
+                [(ngModel)]="tripToSave.name"  class="form-control" placeholder="Some text">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3 col-md-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <span style="width: 100px;">Detail</span>
+                    </div>
+                </div>
+                <textarea id="description" name="detail" [(ngModel)]="tripToSave.detail" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3 col-md-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <span style="width: 100px;">Start Date</span>
+                    </div>
+                </div>
+                <input type="date" id="startDate" name="startDate" [ngModel]="tripToSave.startDate | date: 'yyyy-MM-dd'" (ngModelChange)="tripToSave.startDate = $event" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3 col-md-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <span style="width: 100px;">End Date</span>
+                    </div>
+                </div>
+                <input type="date" id="endDate" name="endDate" [ngModel]="tripToSave.endDate | date: 'yyyy-MM-dd'" (ngModelChange)="tripToSave.endDate = $event" class="form-control" />
+            </div>
+        </div>        
+        <div class="row">
+            <div class="input-group mb-3 col-md-2">
+                <input type="submit" class="form-control btn-secondary" [disabled]="frmSaveTrip.invalid || savingInProgress" value="Save" />
+            </div>
+            <div class="input-group mb-3 col-md-3">
+                <input type="button" class="form-control btn-primary" [disabled] = "!(this.tripToSave.id > 0)" (click)="navigateToStay()" value="Update your stay" />
+            </div>
+        </div>
+    </form>
+</div>
